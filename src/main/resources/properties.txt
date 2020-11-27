@@ -1,0 +1,12 @@
+#设备ip
+deviceIP=vpn.yongx.net
+#设备端口
+port=58000
+#用户名
+username=yxxny
+#密码
+password=yxxny12345
+#抓拍文件保存路径(默认为.表示当前jar包路径)注意路径不要有空格
+savePath=/usr/local
+#抓拍时间间隔(默认30s，单位毫秒)
+timeInterval=30000
