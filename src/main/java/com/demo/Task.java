@@ -74,16 +74,15 @@ public class Task extends TimerTask {
                     savePath = ((new File(savePath + File.separator)).getAbsolutePath() + File.separator).replace("\\", "\\\\");
                     System.out.println(iChannelNum + "通道设备抓图--------");
 
-                  //  String fileName=String.valueOf((int)(Math.random()*100+1));
-                    Date date = new Date();	//创建一个date对象
-                    DateFormat fileName=new SimpleDateFormat("MMddHHmmss"); //定义格式
+                    String fileName=LocalDateTime.now().toString();
+
 
                     //String fileName=new SimpleDateFormat("MMddHHmmss").format(new Date());
-                    
 
 
 
-                    boolean res2 = hCNetSDK.NET_DVR_CaptureJPEGPicture(lUserID, new NativeLong((long)iChannelNum),JpegPara, savePath + "photo"+fileName+ (iChannelNum == 33 ? "" : iChannelNum - 33) +".jpg");
+
+                    boolean res2 = hCNetSDK.NET_DVR_CaptureJPEGPicture(lUserID, new NativeLong((long)iChannelNum),JpegPara, savePath + "photo"+ (iChannelNum == 33 ? "" : iChannelNum - 33)+"_"+fileName +".jpg");
                     if (res2) {
                         System.out.println(iChannelNum + "通道抓取成功");
                     } else {
