@@ -75,7 +75,10 @@ public class Task extends TimerTask {
                     System.out.println(iChannelNum + "通道设备抓图--------");
 
                   //  String fileName=String.valueOf((int)(Math.random()*100+1));
-                    String fileName=new SimpleDateFormat("MMddHHmmss").format(new Date());
+                    Date date = new Date();	//创建一个date对象
+                    DateFormat fileName=new SimpleDateFormat("MMddHHmmss"); //定义格式
+
+                    //String fileName=new SimpleDateFormat("MMddHHmmss").format(new Date());
                     
 
 
